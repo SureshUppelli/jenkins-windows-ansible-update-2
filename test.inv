@@ -1,0 +1,8 @@
+[windows2012r2]
+instanceip
+[windows2012r2:vars]
+ansible_user=instanceuser
+ansible_password=hostpasscode
+ansible_port=5986
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
