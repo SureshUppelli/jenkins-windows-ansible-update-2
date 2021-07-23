@@ -15,7 +15,8 @@ pipeline{
 		stage("Updating Windows Server 2012 R2"){
 			steps{
 			
-			ansiblePlaybook installation: 'ansible-home', inventory: 'inventory', playbook: 'main.yml'
+				//Update Windows Server 2012 R2
+				ansiblePlaybook installation: 'ansible-home', inventory: 'test.inv', playbook: 'win2012update.yaml'
 			}
 		}
 	}
