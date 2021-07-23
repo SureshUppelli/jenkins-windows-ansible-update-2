@@ -1,13 +1,13 @@
 ---
 - hosts: windows2012r2
   tasks:
-	- name: windows_updates
-	  win_updates:
-	  reboot_timeout: 1200
-	  log_path: undefined
-	  whitelist: undefined
+   - name: windows_updates
+      win_updates:
+      reboot_timeout: 1200
+      log_path: undefined
+      whitelist: undefined
       category_names: Application;Connectors;CriticalUpdates;DefinitionUpdates;DeveloperKits;FeaturePacks;Guidance;SecurityUpdates;ServicePacks;Tools;UpdateRollups;
-	  reboot: yes 
-	  use_scheduled_task: no 
-	  blacklist: undefined 
-	  state: searched
+      reboot: yes 
+      use_scheduled_task: no 
+      blacklist: undefined 
+      state: searched
