@@ -9,7 +9,7 @@ pipeline{
 			
 				sh '''chmod 777 updateinv.sh
 				sh updateinv.sh $winip $winuser $winpasscode
-				ansible web -i test.inv -m win_ping'''
+				ansible windows2012r2 -i test.inv -m win_ping'''
 			}
 		}
 		stage("Updating Windows Server 2012 R2"){
