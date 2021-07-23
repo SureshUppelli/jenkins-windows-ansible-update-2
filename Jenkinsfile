@@ -7,9 +7,9 @@ pipeline{
 			// Updates Values in inventory details like instance IP, Username, Userpasscode 
 			//Checks status of instance whether it is reachable or not 
 			
-				sh '''chmod 777 changeHost.sh
-		  		sh changeHost.sh $vmip $vmuser $vmpwd'''
-				sh 'ansible web -i inventory -m win_ping'
+				sh '''chmod 777 updateinv.sh
+				sh updateinv.sh $winip $winuser $winpasscode
+				ansible web -i test.inv -m win_ping'''
 			}
 		}
 		stage("Updating Windows Server 2012 R2"){
